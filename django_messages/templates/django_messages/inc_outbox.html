@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load endless %}
+{% paginate message_list %}
+{% get_pages %}
+{% for message in message_list %} 
+    <tr>
+        <td>{{ message.recipient }}</td>
+        <td>
+        <a href="{{ message.get_absolute_url }}">{{ message.subject }}</a>
+        </td>
+        <td>{{ message.sent_at|date:_("DATETIME_FORMAT") }}</td>
+        <td><a href="{% url 'messages_delete' message.id %}?next={% url 'messages_outbox' %}">{% trans "delete" %}</a></td>
+    </tr>
+{% empty %}
+    <tr>
+        <td colspan="4">{% trans "No messages." %}</td>
+    </tr>
+{% endfor %}
+{% if pages|length > 1 %}
+<tr><td colspan="4">
+    <!-- begin pagination -->
+        <ul class="pagination">
+        {% show_pages %}
+        </ul>       
+    <!-- end pagination -->
+</td></tr>
+{% endif %}

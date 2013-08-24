@@ -4,18 +4,18 @@
 # This file is distributed under the same license as the django-messages package.
 # Gene Wu <genewoo@gmail.com>, 2008.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: django_messages 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-04 12:00-0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: GENE WU <genewoo@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-05-14 15:43+0800\n"
+"Last-Translator: jresins <jresins@gmail.com>\n"
+"Language-Team: django_messages <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: fields.py:39
 #, python-format
@@ -43,7 +43,7 @@ msgstr "收到的消息"
 
 #: management.py:10
 msgid "you have received a message"
-msgstr "你受到了一条消息"
+msgstr "你收到了一条消息"
 
 #: management.py:11
 msgid "Message Sent"
@@ -160,11 +160,11 @@ msgstr "收件箱"
 
 #: templates\messages\base.html.py:9 templates\messages\outbox.html.py:4
 msgid "Sent Messages"
-msgstr "发送的消息"
+msgstr "发件箱"
 
 #: templates\messages\base.html.py:10
 msgid "New Message"
-msgstr "新消息"
+msgstr "发消息"
 
 #: templates\messages\base.html.py:11
 msgid "Trash"
@@ -180,21 +180,19 @@ msgstr "发送"
 
 #: templates\messages\inbox.html.py:7
 msgid "Received"
-msgstr "受到于"
+msgstr "收到于"
 
 #: templates\messages\inbox.html.py:7 templates\messages\outbox.html.py:7
 #: templates\messages\trash.html.py:7
 msgid "Action"
-msgstr "动作"
+msgstr "操作"
 
-#: templates\messages\inbox.html.py:19
-#: templates\messages\outbox.html.py:16
+#: templates\messages\inbox.html.py:19 templates\messages\outbox.html.py:16
 #: templates\messages\trash.html.py:16 templates\messages\view.html.py:11
 msgid "DATETIME_FORMAT"
-msgstr ""
+msgstr "Y-m-d H:i:s"
 
-#: templates\messages\inbox.html.py:20
-#: templates\messages\outbox.html.py:17
+#: templates\messages\inbox.html.py:20 templates\messages\outbox.html.py:17
 msgid "delete"
 msgstr "删除"
 
@@ -208,8 +206,8 @@ msgid ""
 msgstr ""
 "%(recipient)s：\n"
 "\n"
-"你受到一条从%(sender)s发出的私人信息有\n"
-"以下内容:"
+"你收到一条从%(sender)s发出的私人信息\n"
+"内容如下:"
 
 #: templates\messages\new_message.html.py:9
 #, python-format
@@ -241,9 +239,7 @@ msgstr "恢复"
 msgid ""
 "Deleted Messages are removed from the trash at unregular intervals, don't "
 "rely on this feature for long-time storage."
-msgstr ""
-"删除的消息将定期删除，不要依赖此功能作为长期存储。"
-""
+msgstr "垃圾箱中的消息将不定期被清理，不要将垃圾箱用作长期存储的仓库。"
 
 #: templates\messages\view.html.py:4
 msgid "View Message"
@@ -266,7 +262,6 @@ msgid ""
 "from %(message_sender)s."
 msgstr ""
 "你已收到%(message_sender)s的消息<a href=\"%(message_url)s\">%(message)s</a>。"
-""
 
 #: templates\notification\messages_recovered\notice.html.py:1
 #, python-format
@@ -280,20 +275,24 @@ msgid ""
 "You have replied to <a href=\"%(message_url)s\">%(message_parent_msg)s</a> "
 "from %(message_recipient)s."
 msgstr ""
-"你已回复了%(message_recipient)s.发出的消息<a href=\"%(message_url)s\">%(message_parent_msg)s</a>"
-""
+"你已回复了%(message_recipient)s.发出的消息<a href=\"%(message_url)s\">"
+"%(message_parent_msg)s</a>"
 
 #: templates\notification\messages_reply_received\notice.html.py:2
 #, python-format
 msgid "%(message_sender)s has sent you a reply to %(message_parent_msg)s."
-msgstr ""
-"%(message_sender)s已回复你发出的消息：%(message_parent_msg)s."
+msgstr "%(message_sender)s已回复你发出的消息：%(message_parent_msg)s."
 
 #: templates\notification\messages_sent\notice.html.py:2
 #, python-format
 msgid ""
-"You have sent the message <a href=\"%(message_url)s\">%(message)s</a> to %"
-"(message_recipient)s."
+"You have sent the message <a href=\"%(message_url)s\">%(message)s</a> to "
+"%(message_recipient)s."
 msgstr ""
-"你已发送消息<a href=\"%(message_url)s\">%(message)s</a>到%"
-"(message_recipient)s."
+"你已发送消息<a href=\"%(message_url)s\">%(message)s</a>"
+"到%(message_recipient)s."
+
+#: templates/messages/inbox.html:27 templates/messages/outbox.html:24
+#: templates/messages/trash.html:24
+msgid "No messages."
+msgstr "没有消息"

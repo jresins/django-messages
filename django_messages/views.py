@@ -1,3 +1,4 @@
+#modified by jresins@gmail.com
 import datetime
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
@@ -8,9 +9,11 @@ from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
 from django.conf import settings
 
+from endless_pagination.decorators import page_template, page_templates
 from django_messages.models import Message
 from django_messages.forms import ComposeForm
 from django_messages.utils import format_quote, get_user_model, get_username_field
+from django_messages import signals 
 
 User = get_user_model()
 
@@ -19,31 +22,42 @@ if "notification" in settings.INSTALLED_APPS:
 else:
     notification = None
 
-def inbox(request, template_name='django_messages/inbox.html'):
+@page_template('django_messages/inc_inbox.html')
+def inbox(request, template_name='django_messages/inbox.html', extra_context=None):
     """
     Displays a list of received messages for the current user.
     Optional Arguments:
         ``template_name``: name of the template to use.
     """
     message_list = Message.objects.inbox_for(request.user)
-    return render_to_response(template_name, {
+    context = {
         'message_list': message_list,
-    }, context_instance=RequestContext(request))
+    }
+    if extra_context is not None:
+        context.update(extra_context)
+    return render_to_response(template_name, context,
+        context_instance=RequestContext(request))
 inbox = login_required(inbox)
 
-def outbox(request, template_name='django_messages/outbox.html'):
+@page_template('django_messages/inc_outbox.html')
+def outbox(request, template_name='django_messages/outbox.html',extra_context=None):
     """
     Displays a list of sent messages by the current user.
     Optional arguments:
         ``template_name``: name of the template to use.
     """
     message_list = Message.objects.outbox_for(request.user)
-    return render_to_response(template_name, {
-        'message_list': message_list,
-    }, context_instance=RequestContext(request))
+    context = {
+    'message_list': message_list,
+    }
+    if extra_context is not None:
+        context.update(extra_context)
+    return render_to_response(template_name, context,
+        context_instance=RequestContext(request))
 outbox = login_required(outbox)
 
-def trash(request, template_name='django_messages/trash.html'):
+@page_template('django_messages/inc_trash.html')
+def trash(request, template_name='django_messages/trash.html',extra_context=None):
     """
     Displays a list of deleted messages. 
     Optional arguments:
@@ -52,9 +66,13 @@ def trash(request, template_name='django_messages/trash.html'):
     by sender and recipient.
     """
     message_list = Message.objects.trash_for(request.user)
-    return render_to_response(template_name, {
-        'message_list': message_list,
-    }, context_instance=RequestContext(request))
+    context = {
+    'message_list': message_list,
+    }
+    if extra_context is not None:
+        context.update(extra_context)
+    return render_to_response(template_name, context,
+        context_instance=RequestContext(request))
 trash = login_required(trash)
 
 def compose(request, recipient=None, form_class=ComposeForm,
@@ -155,6 +173,10 @@ def delete(request, message_id, success_url=None):
     if deleted:
         message.save()
         messages.info(request, _(u"Message successfully deleted."))
+        #signals added by jresins@gmail.com        
+        signals.message_state_change.send(sender=user.__class__,
+                                          request=request,
+                                          user=user)        
         if notification:
             notification.send([user], "messages_deleted", {'message': message,})
         return HttpResponseRedirect(success_url)
@@ -182,6 +204,10 @@ def undelete(request, message_id, success_url=None):
     if undeleted:
         message.save()
         messages.info(request, _(u"Message successfully recovered."))
+        #signals added by jresins@gmail.com
+        signals.message_state_change.send(sender=user.__class__,
+                                          request=request,
+                                          user=user)        
         if notification:
             notification.send([user], "messages_recovered", {'message': message,})
         return HttpResponseRedirect(success_url)
@@ -205,6 +231,10 @@ def view(request, message_id, template_name='django_messages/view.html'):
     if message.read_at is None and message.recipient == user:
         message.read_at = now
         message.save()
+        #signals added by jresins@gmail.com
+        signals.message_state_change.send(sender=user.__class__,
+                                          request=request,
+                                          user=user)
     return render_to_response(template_name, {
         'message': message,
     }, context_instance=RequestContext(request))

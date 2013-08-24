@@ -3,7 +3,8 @@
 {% load url from future %}
 
 {% block content %}
-<h1>{% trans "View Message" %}</h1>
+<fieldset>
+<legend>{% trans "View Message" %}</legend>
 <dl class="message-headers">
     <dt>{% trans "Subject" %}</dt>
     <dd><strong>{{ message.subject }}</strong></dd>
@@ -21,3 +22,4 @@
 {% endifequal %}
 <a href="{% url 'messages_delete' message.id %}">{% trans "Delete" %}</a>
 {% endblock %}
+</fieldset>
