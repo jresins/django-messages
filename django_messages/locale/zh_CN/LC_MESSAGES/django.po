@@ -9,13 +9,14 @@ msgstr ""
 "Project-Id-Version: django_messages 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-04 12:00-0000\n"
-"PO-Revision-Date: 2013-05-14 15:43+0800\n"
+"PO-Revision-Date: 2014-01-26 17:00+0800\n"
 "Last-Translator: jresins <jresins@gmail.com>\n"
 "Language-Team: django_messages <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.2\n"
+"Language: zh_CN\n"
 
 #: fields.py:39
 #, python-format
@@ -25,7 +26,7 @@ msgstr "以下用户名不正确: %(users)s"
 #: forms.py:23 models.py:53 templates\messages\outbox.html.py:7
 #: templates\messages\view.html.py:12
 msgid "Recipient"
-msgstr "收信人"
+msgstr "收件人"
 
 #: forms.py:24 models.py:50 templates\messages\inbox.html.py:7
 #: templates\messages\outbox.html.py:7 templates\messages\trash.html.py:7
@@ -35,15 +36,15 @@ msgstr "主题"
 
 #: forms.py:25 models.py:51
 msgid "Body"
-msgstr "消息主体"
+msgstr "内容"
 
 #: management.py:10
 msgid "Message Received"
-msgstr "收到的消息"
+msgstr "收到的私信"
 
 #: management.py:10
 msgid "you have received a message"
-msgstr "你收到了一条消息"
+msgstr "你收到了一封私信"
 
 #: management.py:11
 msgid "Message Sent"
@@ -51,15 +52,15 @@ msgstr "消息已发出"
 
 #: management.py:11
 msgid "you have sent a message"
-msgstr "你已发出了一条消息"
+msgstr "你发出了一封私信"
 
 #: management.py:12
 msgid "Message Replied"
-msgstr "消息已回复"
+msgstr "信件已回复"
 
 #: management.py:12
 msgid "you have replied to a message"
-msgstr "你已回复了一条消息"
+msgstr "你回复了一封私信"
 
 #: management.py:13
 msgid "Reply Received"
@@ -67,7 +68,7 @@ msgstr "回复已收到"
 
 #: management.py:13
 msgid "you have received a reply to a message"
-msgstr "你已收到了消息的一条回复"
+msgstr "你收到了一封回信"
 
 #: management.py:14
 msgid "Message Deleted"
@@ -75,15 +76,15 @@ msgstr "消息已删除"
 
 #: management.py:14
 msgid "you have deleted a message"
-msgstr "你已删除了一条消息"
+msgstr "你删除了一封私信"
 
 #: management.py:15
 msgid "Message Recovered"
-msgstr "消息已恢复"
+msgstr "信件已恢复"
 
 #: management.py:15
 msgid "you have undelete a message"
-msgstr "你已恢复了一条消息"
+msgstr "你恢复了一封私信"
 
 #: models.py:52 templates\messages\inbox.html.py:7
 #: templates\messages\trash.html.py:7 templates\messages\view.html.py:8
@@ -92,44 +93,44 @@ msgstr "发信人"
 
 #: models.py:54
 msgid "Parent message"
-msgstr "原消息"
+msgstr "原信件"
 
 #: models.py:55
 msgid "sent at"
-msgstr "发送于"
+msgstr "发送时间"
 
 #: models.py:56
 msgid "read at"
-msgstr "阅读于"
+msgstr "阅读时间"
 
 #: models.py:57
 msgid "replied at"
-msgstr "回复于"
+msgstr "回复时间"
 
 #: models.py:58
 msgid "Sender deleted at"
-msgstr "发信人删除于"
+msgstr "发信人删除时间"
 
 #: models.py:59
 msgid "Recipient deleted at"
-msgstr "收件人删除于"
+msgstr "收件人删除时间"
 
 #: models.py:89
 msgid "Message"
-msgstr "消息"
+msgstr "私信"
 
 #: models.py:90
 msgid "Messages"
-msgstr "消息"
+msgstr "私信"
 
 #: utils.py:29
 #, python-format
 msgid "New Message: %(subject)s"
-msgstr "新消息: %(subject)s"
+msgstr "新私信: %(subject)s"
 
 #: views.py:80 views.py:108
 msgid "Message successfully sent."
-msgstr "消息已成功发送。"
+msgstr "信件已成功发送。"
 
 #: views.py:114
 #, python-format
@@ -147,11 +148,11 @@ msgstr "回复: %(subject)s"
 
 #: views.py:154
 msgid "Message successfully deleted."
-msgstr "消息已成功删除。"
+msgstr "私信已成功删除。"
 
 #: views.py:181
 msgid "Message successfully recovered."
-msgstr "消息已成功恢复。"
+msgstr "私信已成功恢复。"
 
 #: templates\messages\base.html.py:8 templates\messages\inbox.html.py:4
 #: templates\messages\new_message.html.py:10
@@ -164,7 +165,7 @@ msgstr "发件箱"
 
 #: templates\messages\base.html.py:10
 msgid "New Message"
-msgstr "发消息"
+msgstr "发私信"
 
 #: templates\messages\base.html.py:11
 msgid "Trash"
@@ -172,7 +173,7 @@ msgstr "回收站"
 
 #: templates\messages\compose.html.py:4
 msgid "Compose Message"
-msgstr "撰写消息"
+msgstr "发信"
 
 #: templates\messages\compose.html.py:9
 msgid "Send"
@@ -180,7 +181,7 @@ msgstr "发送"
 
 #: templates\messages\inbox.html.py:7
 msgid "Received"
-msgstr "收到于"
+msgstr "收于"
 
 #: templates\messages\inbox.html.py:7 templates\messages\outbox.html.py:7
 #: templates\messages\trash.html.py:7
@@ -212,7 +213,7 @@ msgstr ""
 #: templates\messages\new_message.html.py:9
 #, python-format
 msgid "Sent from %(site_url)s"
-msgstr "消息已从%(site_url)s发出"
+msgstr "信件由%(site_url)s发出"
 
 #: templates\messages\new_message.html.py:11
 #: templates\messages\view.html.py:18
@@ -225,7 +226,7 @@ msgstr "已发出"
 
 #: templates\messages\trash.html.py:4
 msgid "Deleted Messages"
-msgstr "删除的消息"
+msgstr "删除的信件"
 
 #: templates\messages\trash.html.py:7 templates\messages\view.html.py:10
 msgid "Date"
@@ -239,11 +240,11 @@ msgstr "恢复"
 msgid ""
 "Deleted Messages are removed from the trash at unregular intervals, don't "
 "rely on this feature for long-time storage."
-msgstr "垃圾箱中的消息将不定期被清理，不要将垃圾箱用作长期存储的仓库。"
+msgstr "垃圾箱中的信件将不定期被清理，不要将垃圾箱用作长期存储的仓库。"
 
 #: templates\messages\view.html.py:4
 msgid "View Message"
-msgstr "浏览消息"
+msgstr "浏览信件"
 
 #: templates\messages\view.html.py:20
 msgid "Delete"
@@ -253,7 +254,7 @@ msgstr "删除"
 #, python-format
 msgid ""
 "You have deleted the message <a href=\"%(message_url)s\">%(message)s</a>."
-msgstr "你已删除了消息<a href=\"%(message_url)s\">%(message)s</a>."
+msgstr "你删除了信件<a href=\"%(message_url)s\">%(message)s</a>."
 
 #: templates\notification\messages_received\notice.html.py:2
 #, python-format
@@ -261,13 +262,13 @@ msgid ""
 "You have received the message <a href=\"%(message_url)s\">%(message)s</a> "
 "from %(message_sender)s."
 msgstr ""
-"你已收到%(message_sender)s的消息<a href=\"%(message_url)s\">%(message)s</a>。"
+"你收到%(message_sender)s的私信<a href=\"%(message_url)s\">%(message)s</a>。"
 
 #: templates\notification\messages_recovered\notice.html.py:1
 #, python-format
 msgid ""
 "You have recovered the message <a href=\"%(message_url)s\">%(message)s</a>."
-msgstr "你已恢复了消息<a href=\"%(message_url)s\">%(message)s</a>."
+msgstr "你恢复了私信<a href=\"%(message_url)s\">%(message)s</a>."
 
 #: templates\notification\messages_replied\notice.html.py:2
 #, python-format
@@ -275,13 +276,13 @@ msgid ""
 "You have replied to <a href=\"%(message_url)s\">%(message_parent_msg)s</a> "
 "from %(message_recipient)s."
 msgstr ""
-"你已回复了%(message_recipient)s.发出的消息<a href=\"%(message_url)s\">"
+"你回复了%(message_recipient)s.发出的私信<a href=\"%(message_url)s\">"
 "%(message_parent_msg)s</a>"
 
 #: templates\notification\messages_reply_received\notice.html.py:2
 #, python-format
 msgid "%(message_sender)s has sent you a reply to %(message_parent_msg)s."
-msgstr "%(message_sender)s已回复你发出的消息：%(message_parent_msg)s."
+msgstr "%(message_sender)s回复了发出的信件：%(message_parent_msg)s."
 
 #: templates\notification\messages_sent\notice.html.py:2
 #, python-format
@@ -289,10 +290,10 @@ msgid ""
 "You have sent the message <a href=\"%(message_url)s\">%(message)s</a> to "
 "%(message_recipient)s."
 msgstr ""
-"你已发送消息<a href=\"%(message_url)s\">%(message)s</a>"
-"到%(message_recipient)s."
+"你向%(message_recipient)s发出了一封私信<a href=\"%(message_url)s\">"
+"%(message)s</a>"
 
 #: templates/messages/inbox.html:27 templates/messages/outbox.html:24
 #: templates/messages/trash.html:24
 msgid "No messages."
-msgstr "没有消息"
+msgstr "没有信件"

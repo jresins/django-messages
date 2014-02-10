@@ -1,49 +1,50 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load url from future %} 
+{% load url from future %}
 {% block bodyclass %}about{% endblock %}
 {% block body %}
 <div class="container">
 <!--begin container-fluid-->
-        <div class="row">
-        <!--begin nav-->
-            <ul class="breadcrumb">
-                <li {% if '/messages/inbox' in request.path%} class="active">
-                    {% trans "Inbox" %}
-                    {% else %}
-                    ><a href="{% url 'messages_inbox' %} ">{% trans "Inbox" %}</a>
-                    {% endif %}
-                </li>
-                <li {% if '/messages/outbox' in request.path%} class="active">
-                    {% trans "Sent Messages" %}
-                    {% else %}
-                    ><a href="{% url 'messages_outbox' %} ">{% trans "Sent Messages" %}</a>
-                    {%endif%}
-                </li>
-                <li {% if 'messages/compose/' in request.path%} class="active">
-                    {% trans "New Message" %}
-                    {% else %}
-                    ><a href="{% url 'messages_compose' %} ">{% trans "New Message" %}</a>
-                {%endif%}
-                </li>
-                <li {% if 'messages/trash/' in request.path%} class="active">
-                    {% trans "Trash" %}
-                    {% else %}
-                    ><a href="{% url 'messages_trash' %} ">{% trans "Trash" %}</a>
+    <div class="row">
+    <!--begin nav-->
+        <ul class="breadcrumb">
+            <li {% if '/messages/inbox' in request.path%} class="active">
+                {% trans "Inbox" %}
+                {% else %}
+                ><a href="{% url 'messages_inbox' %} ">{% trans "Inbox" %}</a>
+                {% endif %}
+            </li>
+            <li {% if '/messages/outbox' in request.path%} class="active">
+                {% trans "Sent Messages" %}
+                {% else %}
+                ><a href="{% url 'messages_outbox' %} ">{% trans "Sent Messages" %}</a>
                 {%endif%}
             </li>
-            </ul>
-        <!--end nav-->
-        </div>
-        <div class="row">
-        <!--begin content-->
-            {% block content%}{%endblock%}
-        <!--end content-->
-        </div>
+            <li {% if 'messages/compose/' in request.path%} class="active">
+                {% trans "New Message" %}
+                {% else %}
+                ><a href="{% url 'messages_compose' %} ">{% trans "New Message" %}</a>
+            {%endif%}
+            </li>
+            <li {% if 'messages/trash/' in request.path%} class="active">
+                {% trans "Trash" %}
+                {% else %}
+                ><a href="{% url 'messages_trash' %} ">{% trans "Trash" %}</a>
+            {%endif%}
+        </li>
+        </ul>
+    <!--end nav-->
+    </div>
+    <div class="row">
+    <!--begin content-->
+        {% block content%}{%endblock%}
+    <!--end content-->
+    </div>
 <!--end container-fluid-->
 </div>
 {% endblock %}
 {% block extra_foot %}
+{{ block.super }}
 <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
 <script>$.endlessPaginate();</script>
-{% endblock %}
+{% endblock extra_foot %}
