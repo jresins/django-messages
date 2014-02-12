@@ -11,7 +11,7 @@ if "notification" in settings.INSTALLED_APPS:
     from notification import models as notification
 else:
     notification = None
-    
+
 from django_messages.models import Message
 
 class MessageAdminForm(forms.ModelForm):
@@ -62,6 +62,7 @@ class MessageAdmin(admin.ModelAdmin):
     list_display = ('subject', 'sender', 'recipient', 'sent_at', 'read_at')
     list_filter = ('sent_at', 'sender', 'recipient')
     search_fields = ('subject', 'body')
+    raw_id_fields = ('sender', 'recipient', 'parent_msg')
 
     def save_model(self, request, obj, form, change):
         """
@@ -73,7 +74,7 @@ class MessageAdmin(admin.ModelAdmin):
         the message is effectively resent to those users.
         """
         obj.save()
-        
+
         if notification:
             # Getting the appropriate notice labels for the sender and recipients.
             if obj.parent_msg is None:
@@ -82,7 +83,7 @@ class MessageAdmin(admin.ModelAdmin):
             else:
                 sender_label = 'messages_replied'
                 recipients_label = 'messages_reply_received'
-                
+
             # Notification for the sender.
             notification.send([obj.sender], sender_label, {'message': obj,})
 
@@ -106,5 +107,5 @@ class MessageAdmin(admin.ModelAdmin):
             if notification:
                 # Notification for the recipient.
                 notification.send([user], recipients_label, {'message' : obj,})
-            
+
 admin.site.register(Message, MessageAdmin)
