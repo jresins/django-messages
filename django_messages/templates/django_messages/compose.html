@@ -1,17 +1,24 @@
-{% extends "django_messages/base.html" %} 
-{% load i18n %} 
-{% load bootstrap %}
+{% extends "django_messages/base.html" %}
+{% load i18n %}
+{% load walnut_tags %}
 {% block content %}
 <form action="" method="post" class="form-horizontal" role="form">
 <fieldset>
 <legend>{% trans "Compose Message"%}</legend>
 {% csrf_token %}
+{{ form.non_field_errors }}
 {% for field in form %}
-{{ field|bootstrap }}
+<div class="form-group">
+    <label class="col-md-1 col-lg-1 control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+    <div class="col-md-11 col-lg-11">
+        {{ field|add_class:"form-control" }}
+        {{ field.errors }}
+    </div>
+</div>
 {% endfor %}
 <div class="form-group">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-10">
+    <div class="col-md-1 col-lg-1"></div>
+    <div class="col-md-11 col-lg-11">
         <button type="submit" class="btn btn-default">{% trans "Send" %}</button>
     </div>
 </div>
