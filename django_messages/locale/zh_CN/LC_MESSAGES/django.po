@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django_messages 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-04 12:00-0000\n"
-"PO-Revision-Date: 2014-01-26 17:00+0800\n"
+"POT-Creation-Date: 2014-02-11 17:21+0800\n"
+"PO-Revision-Date: 2014-02-11 17:29+0800\n"
 "Last-Translator: jresins <jresins@gmail.com>\n"
 "Language-Team: django_messages <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,186 +18,234 @@ msgstr ""
 "X-Generator: Poedit 1.6.2\n"
 "Language: zh_CN\n"
 
-#: fields.py:39
+#: .\admin.py:22 .\forms.py:18 .\models.py:54
+#: .\templates\django_messages\outbox.html:8
+#: .\templates\django_messages\view.html:13
+msgid "Recipient"
+msgstr "收件人"
+
+#: .\admin.py:24
+msgid "group"
+msgstr "组"
+
+#: .\admin.py:25
+msgid "Creates the message optionally for all users or a group of users."
+msgstr "（可选）向所有用户或一组用户发送信件"
+
+#: .\admin.py:32
+msgid "All users"
+msgstr "所有用户"
+
+#: .\admin.py:47 .\models.py:90
+msgid "Message"
+msgstr "私信"
+
+#: .\admin.py:54
+msgid "Date/time"
+msgstr "日期/时间"
+
+#: .\fields.py:56
 #, python-format
 msgid "The following usernames are incorrect: %(users)s"
 msgstr "以下用户名不正确: %(users)s"
 
-#: forms.py:23 models.py:53 templates\messages\outbox.html.py:7
-#: templates\messages\view.html.py:12
-msgid "Recipient"
-msgstr "收件人"
-
-#: forms.py:24 models.py:50 templates\messages\inbox.html.py:7
-#: templates\messages\outbox.html.py:7 templates\messages\trash.html.py:7
-#: templates\messages\view.html.py:6
+#: .\forms.py:19 .\models.py:51 .\templates\django_messages\inbox.html:8
+#: .\templates\django_messages\outbox.html:8
+#: .\templates\django_messages\trash.html:8
+#: .\templates\django_messages\view.html:7
 msgid "Subject"
 msgstr "主题"
 
-#: forms.py:25 models.py:51
+#: .\forms.py:20 .\models.py:52
 msgid "Body"
 msgstr "内容"
 
-#: management.py:10
+#: .\management.py:24
 msgid "Message Received"
 msgstr "收到的私信"
 
-#: management.py:10
+#: .\management.py:24
 msgid "you have received a message"
 msgstr "你收到了一封私信"
 
-#: management.py:11
+#: .\management.py:25
 msgid "Message Sent"
-msgstr "消息已发出"
+msgstr "信件已发出"
 
-#: management.py:11
+#: .\management.py:25
 msgid "you have sent a message"
 msgstr "你发出了一封私信"
 
-#: management.py:12
+#: .\management.py:26
 msgid "Message Replied"
 msgstr "信件已回复"
 
-#: management.py:12
+#: .\management.py:26
 msgid "you have replied to a message"
 msgstr "你回复了一封私信"
 
-#: management.py:13
+#: .\management.py:27
 msgid "Reply Received"
 msgstr "回复已收到"
 
-#: management.py:13
+#: .\management.py:27
 msgid "you have received a reply to a message"
 msgstr "你收到了一封回信"
 
-#: management.py:14
+#: .\management.py:28
 msgid "Message Deleted"
-msgstr "消息已删除"
+msgstr "信件已删除"
 
-#: management.py:14
+#: .\management.py:28
 msgid "you have deleted a message"
 msgstr "你删除了一封私信"
 
-#: management.py:15
+#: .\management.py:29
 msgid "Message Recovered"
 msgstr "信件已恢复"
 
-#: management.py:15
-msgid "you have undelete a message"
+#: .\management.py:29
+#, fuzzy
+msgid "you have undeleted a message"
 msgstr "你恢复了一封私信"
 
-#: models.py:52 templates\messages\inbox.html.py:7
-#: templates\messages\trash.html.py:7 templates\messages\view.html.py:8
+#: .\models.py:53 .\templates\django_messages\inbox.html:8
+#: .\templates\django_messages\trash.html:8
+#: .\templates\django_messages\view.html:9
 msgid "Sender"
 msgstr "发信人"
 
-#: models.py:54
+#: .\models.py:55
 msgid "Parent message"
 msgstr "原信件"
 
-#: models.py:55
+#: .\models.py:56
 msgid "sent at"
 msgstr "发送时间"
 
-#: models.py:56
+#: .\models.py:57
 msgid "read at"
 msgstr "阅读时间"
 
-#: models.py:57
+#: .\models.py:58
 msgid "replied at"
 msgstr "回复时间"
 
-#: models.py:58
+#: .\models.py:59
 msgid "Sender deleted at"
 msgstr "发信人删除时间"
 
-#: models.py:59
+#: .\models.py:60
 msgid "Recipient deleted at"
 msgstr "收件人删除时间"
 
-#: models.py:89
-msgid "Message"
-msgstr "私信"
-
-#: models.py:90
+#: .\models.py:91
 msgid "Messages"
 msgstr "私信"
 
-#: utils.py:29
-#, python-format
-msgid "New Message: %(subject)s"
-msgstr "新私信: %(subject)s"
-
-#: views.py:80 views.py:108
-msgid "Message successfully sent."
-msgstr "信件已成功发送。"
-
-#: views.py:114
-#, python-format
+#: .\utils.py:26
+#, fuzzy, python-format
 msgid ""
+"\n"
+"\n"
+"\n"
 "%(sender)s wrote:\n"
 "%(body)s"
 msgstr ""
 "%(sender)s 写道:\n"
 "%(body)s"
 
-#: views.py:118
+#: .\utils.py:54
+#, fuzzy, python-format
+msgid "Re%(prefix)s: %(subject)s"
+msgstr "回复: %(subject)s"
+
+#: .\utils.py:60
+#, python-format
+msgid "New Message: %(subject)s"
+msgstr "新私信: %(subject)s"
+
+#: .\views.py:96 .\views.py:132
+msgid "Message successfully sent."
+msgstr "信件已成功发送。"
+
+#: .\views.py:144
 #, python-format
 msgid "Re: %(subject)s"
 msgstr "回复: %(subject)s"
 
-#: views.py:154
+#: .\views.py:180
 msgid "Message successfully deleted."
 msgstr "私信已成功删除。"
 
-#: views.py:181
+#: .\views.py:212
 msgid "Message successfully recovered."
 msgstr "私信已成功恢复。"
 
-#: templates\messages\base.html.py:8 templates\messages\inbox.html.py:4
-#: templates\messages\new_message.html.py:10
+#: .\templates\django_messages\base.html:11
+#: .\templates\django_messages\base.html:13
+#: .\templates\django_messages\inbox.html:5
+#: .\templates\django_messages\new_message.html:12
 msgid "Inbox"
 msgstr "收件箱"
 
-#: templates\messages\base.html.py:9 templates\messages\outbox.html.py:4
+#: .\templates\django_messages\base.html:17
+#: .\templates\django_messages\base.html:19
+#: .\templates\django_messages\outbox.html:5
 msgid "Sent Messages"
 msgstr "发件箱"
 
-#: templates\messages\base.html.py:10
+#: .\templates\django_messages\base.html:23
+#: .\templates\django_messages\base.html:25
 msgid "New Message"
 msgstr "发私信"
 
-#: templates\messages\base.html.py:11
+#: .\templates\django_messages\base.html:29
+#: .\templates\django_messages\base.html:31
 msgid "Trash"
 msgstr "回收站"
 
-#: templates\messages\compose.html.py:4
+#: .\templates\django_messages\compose.html:7
 msgid "Compose Message"
 msgstr "发信"
 
-#: templates\messages\compose.html.py:9
+#: .\templates\django_messages\compose.html:22
 msgid "Send"
 msgstr "发送"
 
-#: templates\messages\inbox.html.py:7
+#: .\templates\django_messages\inbox.html:8
 msgid "Received"
 msgstr "收于"
 
-#: templates\messages\inbox.html.py:7 templates\messages\outbox.html.py:7
-#: templates\messages\trash.html.py:7
+#: .\templates\django_messages\inbox.html:8
+#: .\templates\django_messages\outbox.html:8
+#: .\templates\django_messages\trash.html:8
 msgid "Action"
 msgstr "操作"
 
-#: templates\messages\inbox.html.py:19 templates\messages\outbox.html.py:16
-#: templates\messages\trash.html.py:16 templates\messages\view.html.py:11
+#: .\templates\django_messages\inc_inbox.html:15
+#: .\templates\django_messages\inc_outbox.html:11
+#: .\templates\django_messages\inc_trash.html:11
+#: .\templates\django_messages\view.html:12
 msgid "DATETIME_FORMAT"
 msgstr "Y-m-d H:i:s"
 
-#: templates\messages\inbox.html.py:20 templates\messages\outbox.html.py:17
+#: .\templates\django_messages\inc_inbox.html:16
+#: .\templates\django_messages\inc_outbox.html:12
 msgid "delete"
 msgstr "删除"
 
-#: templates\messages\new_message.html.py:1
+#: .\templates\django_messages\inc_inbox.html:19
+#: .\templates\django_messages\inc_outbox.html:16
+#: .\templates\django_messages\inc_trash.html:15
+msgid "No messages."
+msgstr "没有信件"
+
+#: .\templates\django_messages\inc_trash.html:12
+msgid "undelete"
+msgstr "恢复"
+
+#: .\templates\django_messages\new_message.html:3
 #, python-format
 msgid ""
 "Hello %(recipient)s,\n"
@@ -207,56 +255,70 @@ msgid ""
 msgstr ""
 "%(recipient)s：\n"
 "\n"
-"你收到一条从%(sender)s发出的私人信息\n"
+"你收到一条从%(sender)s发出的私信\n"
 "内容如下:"
 
-#: templates\messages\new_message.html.py:9
+#: .\templates\django_messages\new_message.html:11
 #, python-format
 msgid "Sent from %(site_url)s"
 msgstr "信件由%(site_url)s发出"
 
-#: templates\messages\new_message.html.py:11
-#: templates\messages\view.html.py:18
+#: .\templates\django_messages\new_message.html:13
+#: .\templates\django_messages\view.html:19
 msgid "Reply"
 msgstr "回复"
 
-#: templates\messages\outbox.html.py:7
+#: .\templates\django_messages\outbox.html:8
 msgid "Sent"
 msgstr "已发出"
 
-#: templates\messages\trash.html.py:4
+#: .\templates\django_messages\trash.html:5
 msgid "Deleted Messages"
 msgstr "删除的信件"
 
-#: templates\messages\trash.html.py:7 templates\messages\view.html.py:10
+#: .\templates\django_messages\trash.html:8
+#: .\templates\django_messages\view.html:11
 msgid "Date"
 msgstr "日期"
 
-#: templates\messages\trash.html.py:17
-msgid "undelete"
-msgstr "恢复"
-
-#: templates\messages\trash.html.py:23
+#: .\templates\django_messages\trash.html:15
 msgid ""
 "Deleted Messages are removed from the trash at unregular intervals, don't "
 "rely on this feature for long-time storage."
 msgstr "垃圾箱中的信件将不定期被清理，不要将垃圾箱用作长期存储的仓库。"
 
-#: templates\messages\view.html.py:4
+#: .\templates\django_messages\view.html:5
 msgid "View Message"
 msgstr "浏览信件"
 
-#: templates\messages\view.html.py:20
+#: .\templates\django_messages\view.html:21
 msgid "Delete"
 msgstr "删除"
 
-#: templates\notification\messages_deleted\notice.html.py:1
+#: .\templates\notification\messages_deleted\full.txt:1
+#, fuzzy, python-format
+msgid "You have deleted the message '%(message)s'."
+msgstr "你删除了一封私信"
+
+#: .\templates\notification\messages_deleted\notice.html:1
 #, python-format
 msgid ""
 "You have deleted the message <a href=\"%(message_url)s\">%(message)s</a>."
 msgstr "你删除了信件<a href=\"%(message_url)s\">%(message)s</a>."
 
-#: templates\notification\messages_received\notice.html.py:2
+#: .\templates\notification\messages_received\full.txt:1
+#, fuzzy, python-format
+msgid ""
+"%(message_sender)s has sent you a message:\n"
+"\n"
+"%(message)s\n"
+"\n"
+"%(message_body)s\n"
+"\n"
+"http://%(current_site)s%(message_url)s"
+msgstr "%(message_sender)s回复了发出的信件：%(message_parent_msg)s."
+
+#: .\templates\notification\messages_received\notice.html:2
 #, python-format
 msgid ""
 "You have received the message <a href=\"%(message_url)s\">%(message)s</a> "
@@ -264,13 +326,32 @@ msgid ""
 msgstr ""
 "你收到%(message_sender)s的私信<a href=\"%(message_url)s\">%(message)s</a>。"
 
-#: templates\notification\messages_recovered\notice.html.py:1
+#: .\templates\notification\messages_received\short.txt:1
+#: .\templates\notification\messages_reply_received\short.txt:1
+#, python-format
+msgid "%(notice)s by %(message_sender)s"
+msgstr "来自 %(message_sender)s的通知：%(notice)s"
+
+#: .\templates\notification\messages_recovered\full.txt:1
+#, fuzzy, python-format
+msgid "You have recovered the message '%(message)s'."
+msgstr "你恢复了私信<a href=\"%(message_url)s\">%(message)s</a>."
+
+#: .\templates\notification\messages_recovered\notice.html:1
 #, python-format
 msgid ""
 "You have recovered the message <a href=\"%(message_url)s\">%(message)s</a>."
 msgstr "你恢复了私信<a href=\"%(message_url)s\">%(message)s</a>."
 
-#: templates\notification\messages_replied\notice.html.py:2
+#: .\templates\notification\messages_replied\full.txt:1
+#, fuzzy, python-format
+msgid ""
+"You have replied to '%(message_parent_msg)s' from %(message_recipient)s."
+msgstr ""
+"你回复了%(message_recipient)s.发出的私信<a href=\"%(message_url)s\">"
+"%(message_parent_msg)s</a>"
+
+#: .\templates\notification\messages_replied\notice.html:2
 #, python-format
 msgid ""
 "You have replied to <a href=\"%(message_url)s\">%(message_parent_msg)s</a> "
@@ -279,12 +360,42 @@ msgstr ""
 "你回复了%(message_recipient)s.发出的私信<a href=\"%(message_url)s\">"
 "%(message_parent_msg)s</a>"
 
-#: templates\notification\messages_reply_received\notice.html.py:2
+#: .\templates\notification\messages_reply_received\full.txt:1
 #, python-format
-msgid "%(message_sender)s has sent you a reply to %(message_parent_msg)s."
-msgstr "%(message_sender)s回复了发出的信件：%(message_parent_msg)s."
+msgid ""
+"%(message_sender)s replied to '%(message_parent_msg)s':\n"
+"\n"
+"%(message)s\n"
+"\n"
+"%(message_body)s\n"
+"\n"
+"http://%(current_site)s%(message_url)s"
+msgstr ""
+"%(message_sender)s 回复了 '%(message_parent_msg)s':\n"
+"\n"
+"%(message)s\n"
+"\n"
+"%(message_body)s\n"
+"\n"
+"http://%(current_site)s%(message_url)s"
 
-#: templates\notification\messages_sent\notice.html.py:2
+#: .\templates\notification\messages_reply_received\notice.html:2
+#, python-format
+msgid ""
+"%(message_sender)s sent you a message reply :<a href=\"%(message_url)s\">"
+"%(message)s</a>."
+msgstr ""
+"%(message_sender)s回复了你的信件：<a href=\"%(message_url)s\">%(message)s</"
+"a>。"
+
+#: .\templates\notification\messages_sent\full.txt:1
+#, fuzzy, python-format
+msgid "You have sent the message '%(message)s' to %(message_recipient)s."
+msgstr ""
+"你向%(message_recipient)s发出了一封私信<a href=\"%(message_url)s\">"
+"%(message)s</a>"
+
+#: .\templates\notification\messages_sent\notice.html:2
 #, python-format
 msgid ""
 "You have sent the message <a href=\"%(message_url)s\">%(message)s</a> to "
@@ -292,8 +403,3 @@ msgid ""
 msgstr ""
 "你向%(message_recipient)s发出了一封私信<a href=\"%(message_url)s\">"
 "%(message)s</a>"
-
-#: templates/messages/inbox.html:27 templates/messages/outbox.html:24
-#: templates/messages/trash.html:24
-msgid "No messages."
-msgstr "没有信件"
