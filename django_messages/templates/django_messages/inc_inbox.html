@@ -3,7 +3,7 @@
 {% paginate message_list %}
 {% get_pages %}
 
-{% for message in message_list %} 
+{% for message in message_list %}
     <tr>
         <td>{{ message.sender }}</td>
         <td>
@@ -21,9 +21,9 @@
 {% if pages|length > 1 %}
 <tr><td colspan="4">
     <!-- begin pagination -->
-        <ul class="pagination">
+        <ul class="pagination pagination-sm">
         {% show_pages %}
-        </ul>       
+        </ul>
     <!-- end pagination -->
 </td></tr>
 {% endif %}
