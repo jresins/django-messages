@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 17:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\admin.py:22 .\forms.py:18 .\models.py:54
+#: .\templates\django_messages\outbox.html:8
+#: .\templates\django_messages\view.html:13
+msgid "Recipient"
+msgstr ""
+
+#: .\admin.py:24
+msgid "group"
+msgstr ""
+
+#: .\admin.py:25
+msgid "Creates the message optionally for all users or a group of users."
+msgstr ""
+
+#: .\admin.py:32
+msgid "All users"
+msgstr ""
+
+#: .\admin.py:47 .\models.py:90
+msgid "Message"
+msgstr ""
+
+#: .\admin.py:54
+msgid "Date/time"
+msgstr ""
+
+#: .\fields.py:56
+#, python-format
+msgid "The following usernames are incorrect: %(users)s"
+msgstr ""
+
+#: .\forms.py:19 .\models.py:51 .\templates\django_messages\inbox.html:8
+#: .\templates\django_messages\outbox.html:8
+#: .\templates\django_messages\trash.html:8
+#: .\templates\django_messages\view.html:7
+msgid "Subject"
+msgstr ""
+
+#: .\forms.py:20 .\models.py:52
+msgid "Body"
+msgstr ""
+
+#: .\management.py:24
+msgid "Message Received"
+msgstr ""
+
+#: .\management.py:24
+msgid "you have received a message"
+msgstr ""
+
+#: .\management.py:25
+msgid "Message Sent"
+msgstr ""
+
+#: .\management.py:25
+msgid "you have sent a message"
+msgstr ""
+
+#: .\management.py:26
+msgid "Message Replied"
+msgstr ""
+
+#: .\management.py:26
+msgid "you have replied to a message"
+msgstr ""
+
+#: .\management.py:27
+msgid "Reply Received"
+msgstr ""
+
+#: .\management.py:27
+msgid "you have received a reply to a message"
+msgstr ""
+
+#: .\management.py:28
+msgid "Message Deleted"
+msgstr ""
+
+#: .\management.py:28
+msgid "you have deleted a message"
+msgstr ""
+
+#: .\management.py:29
+msgid "Message Recovered"
+msgstr ""
+
+#: .\management.py:29
+msgid "you have undeleted a message"
+msgstr ""
+
+#: .\models.py:53 .\templates\django_messages\inbox.html:8
+#: .\templates\django_messages\trash.html:8
+#: .\templates\django_messages\view.html:9
+msgid "Sender"
+msgstr ""
+
+#: .\models.py:55
+msgid "Parent message"
+msgstr ""
+
+#: .\models.py:56
+msgid "sent at"
+msgstr ""
+
+#: .\models.py:57
+msgid "read at"
+msgstr ""
+
+#: .\models.py:58
+msgid "replied at"
+msgstr ""
+
+#: .\models.py:59
+msgid "Sender deleted at"
+msgstr ""
+
+#: .\models.py:60
+msgid "Recipient deleted at"
+msgstr ""
+
+#: .\models.py:91
+msgid "Messages"
+msgstr ""
+
+#: .\utils.py:26
+#, python-format
+msgid ""
+"\n"
+"\n"
+"\n"
+"%(sender)s wrote:\n"
+"%(body)s"
+msgstr ""
+
+#: .\utils.py:54
+#, python-format
+msgid "Re%(prefix)s: %(subject)s"
+msgstr ""
+
+#: .\utils.py:60
+#, python-format
+msgid "New Message: %(subject)s"
+msgstr ""
+
+#: .\views.py:96 .\views.py:132
+msgid "Message successfully sent."
+msgstr ""
+
+#: .\views.py:144
+#, python-format
+msgid "Re: %(subject)s"
+msgstr ""
+
+#: .\views.py:180
+msgid "Message successfully deleted."
+msgstr ""
+
+#: .\views.py:212
+msgid "Message successfully recovered."
+msgstr ""
+
+#: .\templates\django_messages\base.html:11
+#: .\templates\django_messages\base.html:13
+#: .\templates\django_messages\inbox.html:5
+#: .\templates\django_messages\new_message.html:12
+msgid "Inbox"
+msgstr ""
+
+#: .\templates\django_messages\base.html:17
+#: .\templates\django_messages\base.html:19
+#: .\templates\django_messages\outbox.html:5
+msgid "Sent Messages"
+msgstr ""
+
+#: .\templates\django_messages\base.html:23
+#: .\templates\django_messages\base.html:25
+msgid "New Message"
+msgstr ""
+
+#: .\templates\django_messages\base.html:29
+#: .\templates\django_messages\base.html:31
+msgid "Trash"
+msgstr ""
+
+#: .\templates\django_messages\compose.html:7
+msgid "Compose Message"
+msgstr ""
+
+#: .\templates\django_messages\compose.html:22
+msgid "Send"
+msgstr ""
+
+#: .\templates\django_messages\inbox.html:8
+msgid "Received"
+msgstr ""
+
+#: .\templates\django_messages\inbox.html:8
+#: .\templates\django_messages\outbox.html:8
+#: .\templates\django_messages\trash.html:8
+msgid "Action"
+msgstr ""
+
+#: .\templates\django_messages\inc_inbox.html:15
+#: .\templates\django_messages\inc_outbox.html:11
+#: .\templates\django_messages\inc_trash.html:11
+#: .\templates\django_messages\view.html:12
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: .\templates\django_messages\inc_inbox.html:16
+#: .\templates\django_messages\inc_outbox.html:12
+msgid "delete"
+msgstr ""
+
+#: .\templates\django_messages\inc_inbox.html:19
+#: .\templates\django_messages\inc_outbox.html:16
+#: .\templates\django_messages\inc_trash.html:15
+msgid "No messages."
+msgstr ""
+
+#: .\templates\django_messages\inc_trash.html:12
+msgid "undelete"
+msgstr ""
+
+#: .\templates\django_messages\new_message.html:3
+#, python-format
+msgid ""
+"Hello %(recipient)s,\n"
+"\n"
+"you received a private message from %(sender)s with\n"
+"the following contents:"
+msgstr ""
+
+#: .\templates\django_messages\new_message.html:11
+#, python-format
+msgid "Sent from %(site_url)s"
+msgstr ""
+
+#: .\templates\django_messages\new_message.html:13
+#: .\templates\django_messages\view.html:19
+msgid "Reply"
+msgstr ""
+
+#: .\templates\django_messages\outbox.html:8
+msgid "Sent"
+msgstr ""
+
+#: .\templates\django_messages\trash.html:5
+msgid "Deleted Messages"
+msgstr ""
+
+#: .\templates\django_messages\trash.html:8
+#: .\templates\django_messages\view.html:11
+msgid "Date"
+msgstr ""
+
+#: .\templates\django_messages\trash.html:15
+msgid ""
+"Deleted Messages are removed from the trash at unregular intervals, don't "
+"rely on this feature for long-time storage."
+msgstr ""
+
+#: .\templates\django_messages\view.html:5
+msgid "View Message"
+msgstr ""
+
+#: .\templates\django_messages\view.html:21
+msgid "Delete"
+msgstr ""
+
+#: .\templates\notification\messages_deleted\full.txt:1
+#, python-format
+msgid "You have deleted the message '%(message)s'."
+msgstr ""
+
+#: .\templates\notification\messages_deleted\notice.html:1
+#, python-format
+msgid ""
+"You have deleted the message <a href=\"%(message_url)s\">%(message)s</a>."
+msgstr ""
+
+#: .\templates\notification\messages_received\full.txt:1
+#, python-format
+msgid ""
+"%(message_sender)s has sent you a message:\n"
+"\n"
+"%(message)s\n"
+"\n"
+"%(message_body)s\n"
+"\n"
+"http://%(current_site)s%(message_url)s"
+msgstr ""
+
+#: .\templates\notification\messages_received\notice.html:2
+#, python-format
+msgid ""
+"You have received the message <a href=\"%(message_url)s\">%(message)s</a> "
+"from %(message_sender)s."
+msgstr ""
+
+#: .\templates\notification\messages_received\short.txt:1
+#: .\templates\notification\messages_reply_received\short.txt:1
+#, python-format
+msgid "%(notice)s by %(message_sender)s"
+msgstr ""
+
+#: .\templates\notification\messages_recovered\full.txt:1
+#, python-format
+msgid "You have recovered the message '%(message)s'."
+msgstr ""
+
+#: .\templates\notification\messages_recovered\notice.html:1
+#, python-format
+msgid ""
+"You have recovered the message <a href=\"%(message_url)s\">%(message)s</a>."
+msgstr ""
+
+#: .\templates\notification\messages_replied\full.txt:1
+#, python-format
+msgid ""
+"You have replied to '%(message_parent_msg)s' from %(message_recipient)s."
+msgstr ""
+
+#: .\templates\notification\messages_replied\notice.html:2
+#, python-format
+msgid ""
+"You have replied to <a href=\"%(message_url)s\">%(message_parent_msg)s</a> "
+"from %(message_recipient)s."
+msgstr ""
+
+#: .\templates\notification\messages_reply_received\full.txt:1
+#, python-format
+msgid ""
+"%(message_sender)s replied to '%(message_parent_msg)s':\n"
+"\n"
+"%(message)s\n"
+"\n"
+"%(message_body)s\n"
+"\n"
+"http://%(current_site)s%(message_url)s"
+msgstr ""
+
+#: .\templates\notification\messages_reply_received\notice.html:2
+#, python-format
+msgid ""
+"%(message_sender)s sent you a message reply :<a href=\"%(message_url)s\">%"
+"(message)s</a>."
+msgstr ""
+
+#: .\templates\notification\messages_sent\full.txt:1
+#, python-format
+msgid "You have sent the message '%(message)s' to %(message_recipient)s."
+msgstr ""
+
+#: .\templates\notification\messages_sent\notice.html:2
+#, python-format
+msgid ""
+"You have sent the message <a href=\"%(message_url)s\">%(message)s</a> to %"
+"(message_recipient)s."
+msgstr ""
