@@ -1,4 +1,4 @@
-#modified by jresins@gmail.com
+#coding:utf-8
 import datetime
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
@@ -13,7 +13,7 @@ from endless_pagination.decorators import page_template, page_templates
 from django_messages.models import Message
 from django_messages.forms import ComposeForm
 from django_messages.utils import format_quote, get_user_model, get_username_field
-from django_messages import signals
+# from django_messages import signals
 
 User = get_user_model()
 
@@ -131,9 +131,9 @@ def reply(request, message_id, form_class=ComposeForm,
             form.save(sender=request.user, parent_msg=parent)
             messages.info(request, _(u"Message successfully sent."))
             #added by jresins for new message check
-            signals.message_state_change.send(sender=user.__class__,
-                                              request=request,
-                                              user=sender)
+            #signals.message_state_change.send(sender=user.__class__,
+            #                                   request=request,
+            #                                   user=sender)
 
             if success_url is None:
                 success_url = reverse('messages_inbox')
@@ -179,9 +179,9 @@ def delete(request, message_id, success_url=None):
         message.save()
         messages.info(request, _(u"Message successfully deleted."))
         #signals added by jresins@gmail.com
-        signals.message_state_change.send(sender=user.__class__,
-                                          request=request,
-                                          user=user)
+        # signals.message_state_change.send(sender=user.__class__,
+        #                                   request=request,
+        #                                   user=user)
         # notification messages sent incorrectly,remove
         # if notification:
         #     notification.send([user], "messages_received", {'message': message,})
@@ -211,9 +211,9 @@ def undelete(request, message_id, success_url=None):
         message.save()
         messages.info(request, _(u"Message successfully recovered."))
         #signals added by jresins@gmail.com
-        signals.message_state_change.send(sender=user.__class__,
-                                          request=request,
-                                          user=user)
+        # signals.message_state_change.send(sender=user.__class__,
+        #                                   request=request,
+        #                                   user=user)
         if notification:
             notification.send([user], "messages_recovered", {'message': message,})
         return HttpResponseRedirect(success_url)
@@ -238,9 +238,9 @@ def view(request, message_id, template_name='django_messages/view.html'):
         message.read_at = now
         message.save()
         #signals added by jresins@gmail.com
-        signals.message_state_change.send(sender=user.__class__,
-                                          request=request,
-                                          user=user)
+        # signals.message_state_change.send(sender=user.__class__,
+        #                                   request=request,
+        #                                   user=user)
     return render_to_response(template_name, {
         'message': message,
     }, context_instance=RequestContext(request))
